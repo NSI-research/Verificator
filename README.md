@@ -1,0 +1,2 @@
+# Verificator
+A verificator script
