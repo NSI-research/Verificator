@@ -1,2 +1,3 @@
 # Verificator
-A verificator script
+
+Ce script permet de vérifier les inputs.
