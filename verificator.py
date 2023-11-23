@@ -29,4 +29,4 @@ def intVerif(ask):
             return False
         if i == "-" and reponse.index(i) != 0:
             return False
-    return float(reponse)
+    return int(reponse)
