@@ -30,26 +30,27 @@ def intVerif(ask, peer=None, pos=None, nul=None):
     while True:
         nb_prob = 0
         reponse = input(ask)
+
         for i in reponse:
             if i not in listestr:
                 nb_prob += 1
             elif i == "-" and reponse.index(i) != 0:
                 nb_prob += 1
-        if nb_prob == 0:
             
-            if peer is True and int(reponse) % 2 != 0:
-                print("\nCe nombre n'est pas pair.")
-            elif peer is False and int(reponse) % 2 != 1:
-                print("\nCe nombre n'est pas impair.")
+        if nb_prob != 0:
+            print("\nRéponse invalide.")
+        elif peer is True and int(reponse) % 2 != 0:
+            print("\nCe nombre n'est pas pair.")
+        elif peer is False and int(reponse) % 2 != 1:
+            print("\nCe nombre n'est pas impair.")
             
-            elif pos is True and int(reponse) < 0:
-                print("\nCe nombre n'est pas positif")
-            elif pos is False and int(reponse) > 0:
-                print("\nCe nombre n'est pas négatif")
+        elif pos is True and int(reponse) < 0:
+            print("\nCe nombre n'est pas positif")
+        elif pos is False and int(reponse) > 0:
+            print("\nCe nombre n'est pas négatif")
             
-            elif nul is False and int(reponse) == 0:
-                print("\nCe nombre est nul.")
+        elif nul is False and int(reponse) == 0:
+            print("\nCe nombre est nul.")
 
-            else:
-                return int(reponse)
-        
+        else:
+            return int(reponse)
