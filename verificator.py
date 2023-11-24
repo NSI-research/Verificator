@@ -24,7 +24,7 @@ def floatVerif(ask):
         if nb_prob == 0:
             return float(reponse)
 
-def intVerif(ask):
+def intVerif(ask, peer=None, pos=None, nul=None):
     listestr = "1234567890-"
 
     while True:
@@ -33,11 +33,23 @@ def intVerif(ask):
         for i in reponse:
             if i not in listestr:
                 nb_prob += 1
-                print("\nCette valeur est invalide, veuillez réhitérer.")
             elif i == "-" and reponse.index(i) != 0:
                 nb_prob += 1
-                print("\nCette valeur est invalide, veuillez réhitérer.")
         if nb_prob == 0:
-            return int(reponse)
-                
+            
+            if peer is True and int(reponse) % 2 != 0:
+                print("\nCe nombre n'est pas pair.")
+            elif peer is False and int(reponse) % 2 != 1:
+                print("\nCe nombre n'est pas impair.")
+            
+            elif pos is True and int(reponse) < 0:
+                print("\nCe nombre n'est pas positif")
+            elif pos is False and int(reponse) > 0:
+                print("\nCe nombre n'est pas négatif")
+            
+            elif nul is False and int(reponse) == 0:
+                print("\nCe nombre est nul.")
+
+            else:
+                return int(reponse)
         
