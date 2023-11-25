@@ -77,6 +77,8 @@ def IsItA(Question, VariableType="integer", ListType="integer"):
             Value = Value[:-2]
         else:
             Value = Value[:-1]
+        if Value[0] == ",":
+            return 'Not a list'
         for i in range(len(Value)):
             if  Value[i] == "," and Value[i+1] == " ":
                 Value2 += [Value[Virgule:i]]
