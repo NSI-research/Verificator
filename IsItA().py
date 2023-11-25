@@ -1,5 +1,4 @@
-def IsItA(Question, VariableType="integer", ListType="integer"):
-    Value = input(Question))
+def IsItA(Question, VariableType="integer", ListType="string"):
     Lettre = """azertyuiopqsdfghjklmwxcvbnAZERTYUIOPQSDFGHJKLMWXCVBN,;:!*$%/.?&éèûùàùìò\ä\
         ëüöïÄËÜÏÖÀÈÙÌÒ²@^`|}][{#ã€¤£µ§' 0123456789+°)"(#^=ç<>-_"""
     Chiffre = "0123456789"
@@ -12,6 +11,7 @@ def IsItA(Question, VariableType="integer", ListType="integer"):
     Value3 = []
     Virgule = 0
 
+    Value = input(Question)
     if VariableType == "integer":
         for i in range(len(Value)):
             if Value[i] not in Chiffre:
@@ -87,7 +87,6 @@ def IsItA(Question, VariableType="integer", ListType="integer"):
                 Value2 += [Value[Virgule:i]]
                 Virgule = i+1
         Value2 += [Value[Virgule:]]
-
         if ListType == "integer":
             for i in Value2:
                 for j in range(len(i)):
@@ -105,7 +104,6 @@ def IsItA(Question, VariableType="integer", ListType="integer"):
             for i in Value2:
                 Value3 += [int(i)]
             return Value3
-
         elif ListType == "float":
             for i in Value2:
                 for j in range(len(i)):
@@ -126,8 +124,6 @@ def IsItA(Question, VariableType="integer", ListType="integer"):
             for i in Value2:
                 Value3 += [float(i)]
             return Value3
-
-
         elif ListType == "string":
             for i in Value2:
                 for j in range(len(i)):
@@ -136,14 +132,3 @@ def IsItA(Question, VariableType="integer", ListType="integer"):
             for i in Value2:
                 Value3 += [str(i)]
             return Value3
-
-print(IsItA("Liste : ", "list", "float"))
-
-
-###    elif VariableType == "dico":
-##        
-###    elif VariableType == "tuple":
-##        
-###    elif VariableType == "find":
-
-
