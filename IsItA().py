@@ -1,5 +1,5 @@
 def IsItA(Question, VariableType="integer", ListType="integer"):
-    Value = str(input(str(Question)))
+    Value = input(Question))
     Lettre = """azertyuiopqsdfghjklmwxcvbnAZERTYUIOPQSDFGHJKLMWXCVBN,;:!*$%/.?&éèûùàùìò\ä\
         ëüöïÄËÜÏÖÀÈÙÌÒ²@^`|}][{#ã€¤£µ§' 0123456789+°)"(#^=ç<>-_"""
     Chiffre = "0123456789"
@@ -118,13 +118,13 @@ def IsItA(Question, VariableType="integer", ListType="integer"):
                             ScorePoint += 1
                         else:
                             return "Error : One of the element isn't an integer value"
-            if ScoreNegatif > 1 or ScorePoint > 1:
-                return "Error : One of the element isn't an integer value"
-            else:
-                ScoreNegatif = 0
-                ScorePoint = 0
+                if ScoreNegatif > 1 or ScorePoint > 1:
+                    return "Error : One of the element isn't an integer value"
+                else:
+                    ScoreNegatif = 0
+                    ScorePoint = 0
             for i in Value2:
-                Value3 += [int(i)]
+                Value3 += [float(i)]
             return Value3
 
 
